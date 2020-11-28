@@ -1,0 +1,7 @@
+"current Volume 10 above min", 0, 10, 9
+"current Volume 5 above min", 0, 5, 4
+"current Volume above min by 1", 0, 1, 0
+"current Volume above min by 2", 0, 2, 1
+"current Volume is equal to min", 0, 0, 0
+"current Volume below min by 1", 0, -1, 0
+"current Volume below min by 2", 0, -2, 0
