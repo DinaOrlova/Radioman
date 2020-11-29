@@ -13,15 +13,12 @@ public class Radio {
     }
 
     public void setCurrentRadioStation(int currentRadioStation) {
-
         if (currentRadioStation < firstRadioStation) {
             return;
         }
-
         if (currentRadioStation > lastRadioStation) {
             return;
         }
-
         this.currentRadioStation = currentRadioStation;
     }
 
@@ -65,73 +62,55 @@ public class Radio {
         this.maxVolume = maxVolume;
     }
 
-public void chooseCurrentRadioStation() {
-
+    public void chooseCurrentRadioStation() {
         this.currentRadioStation = getCurrentRadioStation();
-}
+    }
 
-
-public void switchToNextRadioStation(int currentRadioStation) {
-
-        if (currentRadioStation >= firstRadioStation) {
-            if (currentRadioStation < lastRadioStation) {
-                this.currentRadioStation = currentRadioStation + 1;
-                return;
+    public void switchToNextRadioStation() {
+        if (currentRadioStation < lastRadioStation) {
+            this.currentRadioStation = getCurrentRadioStation() + 1;
+            return;
         }
-        }
-
         if (currentRadioStation == lastRadioStation) {
             this.currentRadioStation = firstRadioStation;
             return;
         }
-
         this.currentRadioStation = getCurrentRadioStation();
-}
+    }
 
-public void switchToPrevRadioStation(int currentRadioStation) {
-
+    public void switchToPrevRadioStation() {
         if (currentRadioStation > firstRadioStation) {
-            if (currentRadioStation <= lastRadioStation) {
-                this.currentRadioStation = currentRadioStation - 1;
-                return;
-            }
+            this.currentRadioStation = getCurrentRadioStation() - 1;
+            return;
         }
-
         if (currentRadioStation == firstRadioStation) {
             this.currentRadioStation = lastRadioStation;
             return;
         }
-
         this.currentRadioStation = getCurrentRadioStation();
-}
+    }
 
-public void increaseCurrentVolume(int currentVolume) {
-
+    public void increaseCurrentVolume() {
         if (currentVolume > maxVolume) {
             this.currentVolume = maxVolume;
             return;
         }
-
         if (currentVolume < maxVolume) {
-            this.currentVolume = currentVolume + 1;
+            this.currentVolume = getCurrentVolume() + 1;
             return;
         }
+        this.currentVolume = getCurrentVolume();
+    }
 
-        this.currentVolume = currentVolume;
-}
-
-public void decreaseCurrentVolume(int currentVolume) {
-
+    public void decreaseCurrentVolume() {
         if (currentVolume < minVolume) {
             this.currentVolume = minVolume;
             return;
         }
-
         if (currentVolume > minVolume) {
-            this.currentVolume = currentVolume - 1;
+            this.currentVolume = getCurrentVolume() - 1;
             return;
         }
-
-        this.currentVolume = currentVolume;
-}
+        this.currentVolume = getCurrentVolume();
+    }
 }

@@ -4,8 +4,8 @@
 "current number 7, next number 8 RadioStation", 0, 9, 7, 8
 "current number 8, next number 9 RadioStation", 0, 9, 8, 9
 "current number 9, next number 0 RadioStation", 0, 9, 9, 0
-"incorrect current number 10 RadioStation", 0, 9, 10, 0
-"incorrect current number 11 RadioStation", 0, 9, 11, 0
-"incorrect current number -1 RadioStation", 0, 9, -1, 0
-"incorrect current number -2 RadioStation", 0, 9, -2, 0
+"incorrect current number 10 RadioStation", 0, 9, 10, 1
+"incorrect current number 11 RadioStation", 0, 9, 11, 1
+"incorrect current number -1 RadioStation", 0, 9, -1, 1
+"incorrect current number -2 RadioStation", 0, 9, -2, 1
 
