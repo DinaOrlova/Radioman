@@ -68,7 +68,7 @@ public class Radio {
 
     public void switchToNextRadioStation() {
         if (currentRadioStation < lastRadioStation) {
-            this.currentRadioStation = getCurrentRadioStation() + 1;
+            this.currentRadioStation = currentRadioStation + 1;
             return;
         }
         if (currentRadioStation == lastRadioStation) {
@@ -80,7 +80,7 @@ public class Radio {
 
     public void switchToPrevRadioStation() {
         if (currentRadioStation > firstRadioStation) {
-            this.currentRadioStation = getCurrentRadioStation() - 1;
+            this.currentRadioStation = currentRadioStation - 1;
             return;
         }
         if (currentRadioStation == firstRadioStation) {
@@ -96,7 +96,7 @@ public class Radio {
             return;
         }
         if (currentVolume < maxVolume) {
-            this.currentVolume = getCurrentVolume() + 1;
+            this.currentVolume = currentVolume + 1;
             return;
         }
         this.currentVolume = getCurrentVolume();
@@ -108,7 +108,7 @@ public class Radio {
             return;
         }
         if (currentVolume > minVolume) {
-            this.currentVolume = getCurrentVolume() - 1;
+            this.currentVolume = currentVolume - 1;
             return;
         }
         this.currentVolume = getCurrentVolume();
