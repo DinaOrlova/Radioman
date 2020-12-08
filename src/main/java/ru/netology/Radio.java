@@ -1,12 +1,27 @@
 package ru.netology;
 
 public class Radio {
-    private int currentRadioStation;
-    private int firstRadioStation;
-    private int lastRadioStation;
-    private int currentVolume;
-    private int minVolume;
-    private int maxVolume;
+    private int currentRadioStation = 0;
+    private int firstRadioStation = 0;
+    private int lastRadioStation = 9;
+    private int currentVolume = 50;
+    private int minVolume = 0;
+    private int maxVolume = 100;
+
+    public Radio(int firstRadioStation, int lastRadioStation) {
+        this.firstRadioStation = firstRadioStation;
+        this.lastRadioStation = lastRadioStation;
+    }
+
+    public Radio(int currentRadioStation, int firstRadioStation, int lastRadioStation) {
+        this.currentRadioStation = currentRadioStation;
+        this.firstRadioStation = firstRadioStation;
+        this.lastRadioStation = lastRadioStation;
+    }
+
+    public Radio(int currentVolume) {
+        this.currentVolume = currentVolume;
+    }
 
     public int getCurrentRadioStation() {
         return currentRadioStation;
@@ -62,6 +77,10 @@ public class Radio {
         this.maxVolume = maxVolume;
     }
 
+    public void chooseNumberOfRadioStation() {
+        this.lastRadioStation = getLastRadioStation();
+    }
+
     public void chooseCurrentRadioStation() {
         this.currentRadioStation = getCurrentRadioStation();
     }
@@ -75,7 +94,7 @@ public class Radio {
             this.currentRadioStation = firstRadioStation;
             return;
         }
-        this.currentRadioStation = getCurrentRadioStation();
+        this.currentRadioStation = firstRadioStation;
     }
 
     public void switchToPrevRadioStation() {
@@ -87,7 +106,7 @@ public class Radio {
             this.currentRadioStation = lastRadioStation;
             return;
         }
-        this.currentRadioStation = getCurrentRadioStation();
+        this.currentRadioStation = lastRadioStation;
     }
 
     public void increaseCurrentVolume() {
@@ -113,4 +132,5 @@ public class Radio {
         }
         this.currentVolume = getCurrentVolume();
     }
+
 }

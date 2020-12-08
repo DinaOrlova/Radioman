@@ -1,7 +1,8 @@
-"current Volume 0 below max", 10, 0, 1
-"current Volume 5 below max", 10, 5, 6
-"current Volume below max by 1", 10, 9, 10
-"current Volume below max by 2", 10, 8, 9
-"current Volume is equal to max", 10, 10, 10
-"current Volume above max by 1", 10, 11, 10
-"current Volume above max by 2", 10, 12, 10
+"current Volume 0 below max", 0, 1
+"current Volume 0 below max", 1, 2
+"current Volume 5 below max", 50, 51
+"current Volume below max by 1", 99, 100
+"current Volume below max by 2", 98, 99
+"current Volume is equal to max", 100, 100
+"current Volume above max by 1", 101, 100
+"current Volume above max by 2", 102, 100
